@@ -37,7 +37,7 @@ if (isset($_POST['update'])) {
             where `sno` = '$sno'
           ";
          mysqli_query($conn, $q);
-         header('location: index.php');
+         header('location: adminaccount.php');
       }
    }
 }
@@ -97,7 +97,7 @@ if (isset($_POST['update'])) {
             if (mysqli_num_rows($result) > 0) {
                while ($entry = mysqli_fetch_assoc($result)) {
                   echo "
-            <tr onclick='update(this.children[0].innerHTML,this.children[9].innerHTML)'>
+            <tr id='row' onclick='update(this.children[0].innerHTML,this.children[9].innerHTML)'>
             <td>" . $entry['sno'] . "</td>
             <td>" . $entry['email'] . "</td>
             <td>" . $entry['company name'] . "</td>
@@ -129,7 +129,7 @@ if (isset($_POST['update'])) {
                   <!-- <label for="email">Customer : </label> -->
                   <br>
                   <input type="radio" name="status" value="COMPLETED AND CLOSED">
-                  <input type="radio" name="status" value="INCOMPLETE AND CLOSED">
+                  <input type="radio" name="status" value="INCOMPLETE AND OPEN">
                   <br>
                   <label for="remarks">Remarks : </label>
                </div>
@@ -139,7 +139,7 @@ if (isset($_POST['update'])) {
                   <!-- want to read the donor name in read only type -->
                   <br>
                   <label style="text-align: left;" for="email">COMPLETED AND CLOSED</label>
-                  <label style="text-align: left;" for="email">INCOMPLETE AND CLOSED</label>
+                  <label style="text-align: left;" for="email">INCOMPLETE AND OPEN</label>
                   <br>
                   <textarea name="remarks" placeholder="Remarks"></textarea>
                </div>
