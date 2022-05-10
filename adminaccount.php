@@ -152,22 +152,7 @@ if (isset($_POST['update'])) {
          </form>
       </div>
   
-      
-   <div id="update">
-      <form method="post">
-      sno : <input id="sno" name="sno" readonly>
-      email: <input type="test"  name="attender" value=<?php echo $email ?> readonly><br>
-      <br>
-      <input type="radio" name="status" value="COMPLETED AND CLOSED"> COMPLETED AND CLOSED
-      <input type="radio" name="status" value="INCOMPLETE AND CLOSED"> INCOMPLETE AND CLOSED
-      <br>
-      <textarea name="remarks" placeholder="remarks"></textarea>
-      <button type="submit" name="update">SUBMIT</button>
-      <button id="back" >BACK</button>
-   </form>
-   </div>
-
-   <script defer src="./script/update-script.js"></script>
+      <script defer src="./script/update-script.js"></script>
 
 </body>
 
