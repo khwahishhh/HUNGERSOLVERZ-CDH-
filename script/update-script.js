@@ -6,5 +6,5 @@ function update(a,s){
 }
 
 document.getElementById('back').onclick=function(){
-     document.getElementById('update').style.display='none';
+     document.getElementsByClassName('update').style.display='none';
 }

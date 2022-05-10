@@ -13,38 +13,33 @@ if (isset($_POST['logout'])) {
    header("location: index.php");
 }
 
-if(isset($_POST['update'])){
+if (isset($_POST['update'])) {
    $remarks = $_POST['remarks'];
-   if(strlen($remarks)==0)
-   {
+   if (strlen($remarks) == 0) {
       echo "
           <script>
              alert('remarks cannot be empty');
           </script>
       ";
-   }
-   else
-   {
+   } else {
       $attender = $_POST['attender'];
       $sno = $_POST['sno'];
       $status = $_POST['status'];
-      if($status=="")
-      {
+      if ($status == "") {
          echo "
           <script>
              alert('status cannot be empty');
           </script>
       ";
-      }
-      else{
-      $q = "UPDATE donations
+      } else {
+         $q = "UPDATE donations
             SET `status`='$status', `remarks`='$remarks', `volunteer_id`='$attender'
             where `sno` = '$sno'
           ";
-          mysqli_query($conn, $q);      
-          header('location: index.php');
+         mysqli_query($conn, $q);
+         header('location: index.php');
       }
-   }   
+   }
 }
 
 ?>
@@ -56,10 +51,9 @@ if(isset($_POST['update'])){
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Admin Account</title>
-   <link rel="stylesheet" href="./style/acc-style.css?version=">
+   <link rel="stylesheet" href="./style/acc-style.css?version=10">
    <link rel="stylesheet" href="./style/style.css?version=">
-   <link rel="stylesheet" href="./style/table-style.css?version=">
-   <link rel="stylesheet" href="./style/update-style.css?version=">
+   <link rel="stylesheet" href="./style/table-style.css?version=3">
 </head>
 
 <body>
@@ -75,34 +69,34 @@ if(isset($_POST['update'])){
       </ul>
    </header>
    <br>
-   <div class="adminhistory"> 
-   <table class="admintable" >
-      <thead>
-         <tr>
-            <th>S. No.</th>
-            <th>Email-Id</th>
-            <th>Company Name</th>
-            <th>Donor name</th>
-            <th>contact</th>
-            <th>address</th>
-            <th>date</th>
-            <th>time</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>Remarks</th>
-            <th>Attender email</th>
-         </tr>
-      </thead>
-      <tbody>
+   <div class="adminhistory">
+      <table class="admintable">
+         <thead>
+            <tr>
+               <th>S. No.</th>
+               <th>Email-Id</th>
+               <th>Company Name</th>
+               <th>Donor name</th>
+               <th>contact</th>
+               <th>address</th>
+               <th>date</th>
+               <th>time</th>
+               <th>Description</th>
+               <th>Status</th>
+               <th>Remarks</th>
+               <th>Attender email</th>
+            </tr>
+         </thead>
+         <tbody>
 
-         <?php
-      $q = "SELECT * FROM donations";
-      
-      $result = mysqli_query($conn, $q);
-      
-      if (mysqli_num_rows($result) > 0) {
-         while ($entry = mysqli_fetch_assoc($result)) {
-            echo "
+            <?php
+            $q = "SELECT * FROM donations";
+
+            $result = mysqli_query($conn, $q);
+
+            if (mysqli_num_rows($result) > 0) {
+               while ($entry = mysqli_fetch_assoc($result)) {
+                  echo "
             <tr onclick='update(this.children[0].innerHTML,this.children[9].innerHTML)'>
             <td>" . $entry['sno'] . "</td>
             <td>" . $entry['email'] . "</td>
@@ -118,28 +112,62 @@ if(isset($_POST['update'])){
             <td>" . $entry['volunteer_id'] . "</td>
            </tr>
             ";
-         }
-      }
-      
-      ?>
-      </tbody>
-   </table>
-   </div>
+               }
+            }
 
+            ?>
+         </tbody>
+      </table>
+   </div>
+   
+      <div id="update">
+         <form method="post">
+            <div class="row">
+               <div class="formtext">
+                  <label for="sno">S. No. : </label>
+                  <label for="email">Email-Id : </label>
+                  <!-- <label for="email">Customer : </label> -->
+                  <br>
+                  <input type="radio" name="status" value="COMPLETED AND CLOSED">
+                  <input type="radio" name="status" value="INCOMPLETE AND CLOSED">
+                  <br>
+                  <label for="remarks">Remarks : </label>
+               </div>
+               <div class="userinput">
+                  <input id="sno" name="sno" readonly>
+                  <input type="test" name="attender" value=<?php echo $email ?> readonly>
+                  <!-- want to read the donor name in read only type -->
+                  <br>
+                  <label style="text-align: left;" for="email">COMPLETED AND CLOSED</label>
+                  <label style="text-align: left;" for="email">INCOMPLETE AND CLOSED</label>
+                  <br>
+                  <textarea name="remarks" placeholder="Remarks"></textarea>
+               </div>
+            </div>
+            <div class="buttonsupdate">
+               <br>
+               <button class="formbutton" type="submit" name="update">SUBMIT</button>
+               <button class="formbutton" type="submit" id="back">BACK</button>
+            </div>
+         </form>
+      </div>
+  
+      
    <div id="update">
       <form method="post">
       sno : <input id="sno" name="sno" readonly>
+      email: <input type="test"  name="attender" value=<?php echo $email ?> readonly><br>
+      <br>
       <input type="radio" name="status" value="COMPLETED AND CLOSED"> COMPLETED AND CLOSED
       <input type="radio" name="status" value="INCOMPLETE AND CLOSED"> INCOMPLETE AND CLOSED
       <br>
-      email: <input type="test"  name="attender" value=<?php echo $email ?> readonly><br>
       <textarea name="remarks" placeholder="remarks"></textarea>
       <button type="submit" name="update">SUBMIT</button>
       <button id="back" >BACK</button>
    </form>
    </div>
 
-   <script defer src="./scripts/update-script.js"></script>
+   <script defer src="./script/update-script.js"></script>
 
 </body>
 

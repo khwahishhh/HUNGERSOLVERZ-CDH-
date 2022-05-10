@@ -25,7 +25,7 @@ body {
 }
 
 table {
-  width: 800px;
+  width: 90%;
   border-collapse: collapse;
   overflow: hidden;
   border-radius: 10px;
@@ -35,7 +35,7 @@ table {
   background-color: rgba(0, 0, 0, 0.66);
 }
 .admintable {
-  width: 1000px;
+  width: 100%;
   border-collapse: collapse;
   overflow: hidden;
   border-radius: 10px;

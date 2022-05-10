@@ -86,6 +86,11 @@ input {
   cursor: pointer;
 }
 
+form .buttonsupdate .formbutton {
+  width: 46%;
+  margin-top: 10px;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -101,6 +106,36 @@ input {
   background-color: transparent;
   padding: 10px;
 }
+
+.userinput textarea {
+  display: block;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(199, 199, 199, 0.603);
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  padding: 0 7px;
+  color: #ddd;
+  margin-bottom: 9px;
+  margin-top: 9px;
+  font-weight: 300;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.formtext input {
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+#update form {
+  width: 700px;
+  background: rgba(0, 0, 0, 1);
+}
+
+#update{
+  display:none;
+}
+
 
 @media screen and (min-height: 800px) {
   form {
