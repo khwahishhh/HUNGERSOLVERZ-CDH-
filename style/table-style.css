@@ -103,3 +103,8 @@ td :hover :before {
     transform: translate(-50%);
   }
 }
+
+#row:hover{
+  background-color: orange;
+  cursor : pointer;
+}
