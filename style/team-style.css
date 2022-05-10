@@ -1,0 +1,108 @@
+.team{
+  margin-top: 60px;
+  text-align: center;
+}
+
+.team h1{
+  width: 900px;
+  position: relative;
+  /* padding: 3 0 0 0; */
+  margin-top: 6%;
+  transform: translate(-50%);
+  top: 50%;
+  left: 50%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 48px;
+  box-shadow: 0 0 10px #000;
+  border: none;
+  background: rgba(70, 70, 70, 0.6);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.our_team{
+  width: auto;
+  display: flex;
+  padding: 0 0 5% 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.our_team .team_member{
+  width: 250px;
+  margin: 5px;
+  background: rgba(70, 70, 70, 1);
+  border-radius: 15px;
+  padding: 20px 10px;
+}
+
+.our_team .team_member .member_img{
+  background: #e9e5fa;  
+  max-width: 190px;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.our_team .team_member .member_img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.our_team .team_member h3{
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 15px 0 0px;
+}
+.our_team .team_member h4{
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 3px;
+  font-weight: 300;
+  color: #fff;
+  margin: 15px 0 0px;
+}
+
+
+.our_team .team_member .social_media{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(255, 255, 255, 0.65);
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+.our_team .team_member .member_img .social_media .item{
+  margin: 0 10px;
+}
+/* .our_team .team_member .member_img .social_media .fa{
+    font-size: 30px;
+  } */
+.our_team .team_member .member_img:hover .social_media{
+  transform: scale(1);
+}
+
+.our_team .team_member .member_img .social_media .linkedin-item a{
+  text-decoration: none;
+}
+
+/* .our_team .team_member .member_img .social_media a:link, a:after{
+  color:#000;
+} */

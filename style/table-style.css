@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* html,
+body {
+	height: 100%;
+} */
+
+/* body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+	font-weight: 100;
+} */
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 auto;
+  border: 2.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 50px rgba(8, 7, 16, 0.5);
+  background-color: rgba(0, 0, 0, 0.66);
+}
+.admintable {
+  width: 1000px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 auto;
+  border: 2.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 50px rgba(8, 7, 16, 0.5);
+  background-color: rgba(0, 0, 0, 0.66);
+}
+
+h1 {
+  text-align: center;
+  border: 2.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 50px rgba(8, 7, 16, 0.5);
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 15px;
+  color: #fff;
+}
+
+th {
+  text-align: center;
+}
+
+thead,
+th {
+  background-color: rgba(0, 0, 0, 0.455);
+}
+
+tbody,
+tr :hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+td :hover :before {
+  position: relative;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+@media screen and (min-height: 800px) {
+  .history {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .adminhistory {
+    position: absolute;
+    top:180px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
