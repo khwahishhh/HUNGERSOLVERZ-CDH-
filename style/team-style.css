@@ -59,15 +59,17 @@
 .our_team .team_member h3{
   text-transform: uppercase;
   font-size: 20px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  line-height: 1em;
+  font-weight: 700;
   color: #fff;
   margin: 15px 0 0px;
 }
 .our_team .team_member h4{
   text-transform: uppercase;
   font-size: 15px;
-  line-height: 18px;
-  letter-spacing: 3px;
+  line-height: 1.5em;
+  letter-spacing: 2px;
   font-weight: 300;
   color: #fff;
   margin: 15px 0 0px;
