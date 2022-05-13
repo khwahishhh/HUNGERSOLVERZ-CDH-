@@ -60,8 +60,8 @@ if (isset($_POST['done'])) {
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"></a>
-            <img src="./img/logo-white.png" alt="">
+            <a href="index.php">
+            <img src="./img/logo-white.png" alt=""></a>
         </div>
         <ul>
             <li><a href="./index.php">Home</a></li>

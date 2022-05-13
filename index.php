@@ -41,8 +41,8 @@ if (isset($_POST['logout'])) {
    <div>
       <header>
          <div class="logo">
-            <a href="index.html"></a>
-            <img src="./img/logo-white.png" alt="">
+            <a href="index.php">
+            <img src="./img/logo-white.png" alt=""></a>
          </div>
          <ul>
             <?php if (empty($_SESSION['email']) && empty($_SESSION['admin_email'])) { ?>
