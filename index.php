@@ -67,7 +67,7 @@ if (isset($_POST['logout'])) {
       <div class=" content">
          <h1>ABOUT US</h1>
          <div class="para">
-            Food is one of the necessities of humans, and it stands first among all basic needs - food, shelter, and
+             is one of the necessities of humans, and it stands first among all basic needs - food, shelter, and
             clothing. It is important as it nourishes the human body- sustains the very existence of humans.
             However, with the rising population and development of this country, food wastage has risen to a new
             high.
